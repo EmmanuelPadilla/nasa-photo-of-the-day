@@ -1,14 +1,13 @@
 import React from 'react';
 
+// export default Photo;
 
-const Photo = data => {
-    console.log(data)
-    return(
-        <div className="photo">
-            <img src = {data.url} alt='pic of stars'></img>
-        </div>
+const Photo = props => {
+    console.log(props.data, 'lookit')
+    return (
+      <div className="photo">
+        <img src={props.photo} alt="pic of stars"></img>
+      </div>
     );
-};
-
-
-export default Photo;
+  };
+  export default Photo;

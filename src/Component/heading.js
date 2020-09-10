@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react";
+import styled, { keyframes } from "styled-components";
+const StyledHeading = styled.div`
+  color: ${(pr) => pr.theme.mainText};
+`;
 
-const Heading= props => {
-    
-    return(
-    <div className='heading'>
-        <h1>Astronomy Picture of the Day</h1>
-    </div>
-    )
+const Heading = (data) => {
+  return (
+    <StyledHeading className="heading">
+      <h1>Astronomy Picture for {data.date}</h1>
+    </StyledHeading>
+  );
 };
 
 export default Heading;
